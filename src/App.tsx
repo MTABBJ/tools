@@ -16,6 +16,7 @@ function App() {
 
   useEffect(() => {
     console.log(location.pathname);
+    
     setFlag(true)
     setTimeout(() => {
       console.log('app-mount, 5S timeout ')
