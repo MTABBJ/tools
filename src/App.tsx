@@ -5,8 +5,8 @@ import {
   // useNavigate,
   useLocation 
 } from 'react-router-dom'
-import Home from './page/Home'
-import Page2 from './page/Page2'
+import Home from './pages/Home'
+import Page2 from './pages/Page2'
 import Loading from './components/Loading'
 
 function App() {
