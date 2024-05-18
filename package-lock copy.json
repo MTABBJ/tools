@@ -763,7 +763,7 @@
         "eslint-visitor-keys": "^3.3.0"
       },
       "engines": {
-        "node": ">=16.0.0"
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
       },
       "peerDependencies": {
         "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0"
@@ -775,7 +775,7 @@
       "integrity": "sha512-Cu96Sd2By9mCNTx2iyKOmq10v22jUVQv0lQnlGNy16oE9589yE+QADPbrMGCkA51cKZSg3Pu/aTJVTGfL/qjUA==",
       "dev": true,
       "engines": {
-        "node": " >=16.0.0"
+        "node": "^12.0.0 || ^14.0.0 || >=16.0.0"
       }
     },
     "node_modules/@eslint/eslintrc": {
@@ -795,7 +795,7 @@
         "strip-json-comments": "^3.1.1"
       },
       "engines": {
-        "node": " >=16.0.0"
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
       },
       "funding": {
         "url": "https://opencollective.com/eslint"
@@ -844,7 +844,7 @@
       "integrity": "sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==",
       "dev": true,
       "engines": {
-        "node": ">=16.0.0"
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
       }
     },
     "node_modules/@humanwhocodes/config-array": {
@@ -990,7 +990,7 @@
       "resolved": "https://registry.npmjs.org/@remix-run/router/-/router-1.16.1.tgz",
       "integrity": "sha512-es2g3dq6Nb07iFxGk5GuHN20RwBZOsuDQN7izWIisUcv9r+d2C5jQxqmgkdebXgReWfiyUabcki6Fg77mSNrig==",
       "engines": {
-        "node": ">=16.0.0"
+        "node": ">=14.0.0"
       }
     },
     "node_modules/@rollup/rollup-android-arm-eabi": {
@@ -1477,7 +1477,7 @@
         "react-refresh": "^0.14.0"
       },
       "engines": {
-        "node": ">=16.0.0"
+        "node": "^14.18.0 || >=16.0.0"
       },
       "peerDependencies": {
         "vite": "^4.2.0 || ^5.0.0"
@@ -1888,7 +1888,7 @@
         "eslint": "bin/eslint.js"
       },
       "engines": {
-        "node": " >=16.0.0"
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
       },
       "funding": {
         "url": "https://opencollective.com/eslint"
@@ -1925,7 +1925,7 @@
         "estraverse": "^5.2.0"
       },
       "engines": {
-        "node": ">=16.0.0"
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
       },
       "funding": {
         "url": "https://opencollective.com/eslint"
@@ -1937,7 +1937,7 @@
       "integrity": "sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==",
       "dev": true,
       "engines": {
-        "node": ">=16.0.0"
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
       },
       "funding": {
         "url": "https://opencollective.com/eslint"
@@ -2073,7 +2073,7 @@
         "eslint-visitor-keys": "^3.4.1"
       },
       "engines": {
-        "node": ">=16.0.0"
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
       },
       "funding": {
         "url": "https://opencollective.com/eslint"
@@ -2713,7 +2713,7 @@
         "brace-expansion": "^2.0.1"
       },
       "engines": {
-        "node": ">=16"
+        "node": ">=16 || 14 >=14.17"
       },
       "funding": {
         "url": "https://github.com/sponsors/isaacs"
@@ -2740,7 +2740,7 @@
         "nanoid": "bin/nanoid.cjs"
       },
       "engines": {
-        "node": ">=15.0.1"
+        "node": "^10 || ^12 || ^13.7 || ^14 || >=15.0.1"
       }
     },
     "node_modules/natural-compare": {
@@ -2943,7 +2943,7 @@
         "source-map-js": "^1.2.0"
       },
       "engines": {
-        "node": ">=16"
+        "node": "^10 || ^12 || >=14"
       }
     },
     "node_modules/prelude-ls": {
@@ -3031,7 +3031,7 @@
         "@remix-run/router": "1.16.1"
       },
       "engines": {
-        "node": ">=16.0.0"
+        "node": ">=14.0.0"
       },
       "peerDependencies": {
         "react": ">=16.8"
@@ -3046,7 +3046,7 @@
         "react-router": "6.23.1"
       },
       "engines": {
-        "node": ">=16.0.0"
+        "node": ">=14.0.0"
       },
       "peerDependencies": {
         "react": ">=16.8",
@@ -3343,7 +3343,7 @@
         "tsserver": "bin/tsserver"
       },
       "engines": {
-        "node": ">=16"
+        "node": ">=14.17"
       }
     },
     "node_modules/update-browserslist-db": {
