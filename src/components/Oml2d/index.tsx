@@ -30,7 +30,7 @@ const Oml2d: React.FC<Oml2dProps> = memo((props) => {
             ...props,
         });
 
-        oml2d.onLoad((state) => {
+        oml2d.onLoad(() => {
             // switch (state) {
             //     case 'fail':
             //         console.log('加载失败');

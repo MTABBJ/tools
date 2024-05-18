@@ -1,5 +1,4 @@
-import React, { memo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { memo, useState } from 'react'
 import iconLogo from '../../assets/icon.png'
 
 const Home = memo(() => {
