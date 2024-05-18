@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Page2 = memo(() => {
   return (
-    <div> <Link to="/home">home</Link></div>
+    <div>Page2</div>
   )
 })
 

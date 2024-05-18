@@ -1,12 +1,25 @@
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
 import { Link } from 'react-router-dom'
+import iconLogo from '../../assets/icon.png'
 
 const Home = memo(() => {
+  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Link to="/page2">About</Link>
-      <div>Home </div>
+      <div>
+        <img src={iconLogo} className="logo" alt="icon logo" />
+      </div>
+      <h1>Vite + React</h1>
+
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 })

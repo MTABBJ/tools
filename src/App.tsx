@@ -1,45 +1,42 @@
 import { useState, useEffect } from 'react'
-import iconLogo from './assets/icon.png'
 import './App.css'
-import { RouterProvider ,useNavigate} from 'react-router-dom'
-import router from './router/index.tsx'
+import {
+  Routes, Route, Link,
+  useNavigate,useLocation 
+} from 'react-router-dom'
+import Home from './page/Home'
+import Page2 from './page/Page2'
 import Loading from './components/Loading'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const navigate = useNavigate()
+  const location = useLocation()
   const [flag, setFlag] = useState(false)
 
   useEffect(() => {
-    setFlag(true)
+    console.log(location.pathname);
+    // setFlag(true)
+    // setTimeout(() => {
+    //   console.log('app-mount, 5S timeout ')
+    //   setFlag(false)
+    // }, 5000);
 
-    setTimeout(() => {
-      console.log('app-mount, 3S timeout ')
-
-      setFlag(false)
-    }, 3000);
-
-  }, [])
+  }, [location])
 
   return (
     <>
       {flag && <Loading />}
-      <RouterProvider router={router} />
-      <div>
-        <img src={iconLogo} className="logo" alt="icon logo" />
-      </div>
-      <h1>Vite + React</h1>
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-
+      <Link to="/home">首页</Link><br />
+      <Link to="/page2">页面2</Link><br />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/page2" element={<Page2 />} />
+      </Routes>
     </>
+
+
   )
 }
 
-export default App
+export default App;
