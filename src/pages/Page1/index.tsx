@@ -1,11 +1,11 @@
 import { memo } from 'react'
-import './index.less'
 
-const Page2 = memo(() => {
+const Page1 = memo(() => {
   return (
     <>
+    page1
     </>
   )
 })
 
-export default Page2
+export default Page1
