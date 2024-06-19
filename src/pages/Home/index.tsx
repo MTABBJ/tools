@@ -123,7 +123,7 @@ type ColumnTypes = Exclude<EditableTableProps['columns'], undefined>;
 
 const App: React.FC = () => {
   const [dataSource, setDataSource] = useState<DataType[]>(staticData);
-  const [curSource, setCurSource] = useState<DataType[]>(staticData);
+  const [curSource, setCurSource] = useState<DataType[]>([]);
 
   const [count, setCount] = useState(2);
   const [currentText, setCurrentText] = useState<string>();
@@ -171,7 +171,7 @@ const App: React.FC = () => {
 
   const handleAdd = () => {
     const newData: DataType = {
-      key: count,
+      key: `新しい罪状 ${count}`,
       name: `新しい罪状 ${count}`,
       number: 50,
     };
@@ -213,11 +213,11 @@ const App: React.FC = () => {
     };
   });
 
-  const onFinish = useCallback(() => {
+  const onFinish = () => {
     const names = curSource.map((item) => item.name);
     let sum = 0;
-    curSource.forEach(item => {
-      sum += item.number;
+    curSource.forEach((item:any) => {
+      sum += parseInt(item.number);
     });
     let date = new Date();
     const dateStr = date.getHours() + 2 + '時' + date.getMinutes() + '分' + date.getSeconds() + '秒';
@@ -226,17 +226,16 @@ const App: React.FC = () => {
       '合計金額：' + sum + '万円\n' +
       '時間：' + dateStr + 'まで\n'
       }  `
-    // console.log('str', str);
+    console.log('str', str);
     setCurrentText(str)
   }
-    , [curSource]);
 
   const rowSelection = {
-    onChange: ( selectedRows: DataType[]) => {
+    onChange: ( selectedRowKeys: DataType[],selectedRows: DataType[]) => {
       setCurSource(selectedRows)
     },
     getCheckboxProps: (record: DataType) => ({
-      disabled: record.name === 'Disabled User', // Column configuration not to be checked
+      disabled: record.name === 'Disabled User',
       name: record.name,
     }),
   };
@@ -259,6 +258,7 @@ const App: React.FC = () => {
               } as any}
               components={components}
               rowClassName={() => 'editable-row'}
+              rowKey={item => item.key}
               bordered
               dataSource={dataSource}
               columns={columns as any}
