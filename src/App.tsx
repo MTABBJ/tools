@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import {
-  Routes, Route, Link,
-  // useNavigate,
+  Routes, Route, 
+  // Link,
   useLocation 
 } from 'react-router-dom'
 import Home from './pages/Home'
+import Page1 from './pages/Page1'
 import Page2 from './pages/Page2'
 import Loading from './components/Loading'
 
 function App() {
-  // const navigate = useNavigate()
   const location = useLocation()
   const [flag, setFlag] = useState(false)
 
@@ -28,11 +28,13 @@ function App() {
   return (
     <>
       {flag && <Loading />}
-      <Link to="/home">首页</Link><br />
-      <Link to="/page2">页面2</Link><br />
+      {/* <Link to="/home">首页</Link><br />
+      <Link to="/page2">页面2</Link><br /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/page1" element={<Page1 />} />
         <Route path="/page2" element={<Page2 />} />
       </Routes>
     </>
