@@ -8,7 +8,7 @@ import {
 import Home from './pages/Home'
 import Page1 from './pages/Page1'
 import Loading from './components/Loading'
-
+import {localPath} from './const'
 function App() {
   // const location = useLocation()
   const [flag, setFlag] = useState(false)
@@ -21,9 +21,9 @@ function App() {
       <Link to="/page2">页面2</Link><br /> */}
 
       <Routes>
-        <Route path="/myblog/" element={<Home />} />
-        <Route path="/myblog/home" element={<Home />} />
-        <Route path="/myblog/page1" element={<Page1 />} />
+        <Route path={`${localPath}/`} element={<Home />} />
+        <Route path={`${localPath}/home`} element={<Home />} />
+        <Route path={`${localPath}/page1`} element={<Page1 />} />
       </Routes>
     </>
 
