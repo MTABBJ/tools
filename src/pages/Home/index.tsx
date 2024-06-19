@@ -1,5 +1,5 @@
 import { memo, useState, useEffect } from 'react'
-// import { Button, Form, Input, Select, Card, message, Modal, Space, Checkbox, Row, Col } from 'antd';
+import { Button, Form, Input, Select, Card, message, Modal, Space, Checkbox, Row, Col } from 'antd';
 import './index.less'
 
 const filds = [
@@ -19,35 +19,26 @@ const Home = memo(() => {
   useEffect(() => {
   }, []);
 
-  // const onFinish = (e: any) => {
-  //   console.log('currentList', currentList);
-  //   let sum = 0;
-  //   let text = '';
-  //   let date = new Date().toLocaleTimeString();
-  //   currentList.map(i => {
-  //     return i 
-  //   })
-  //   const str = `${'name:' + " value:"}  `
-  //   setCurrentText(str)
+  const onFinish = () => {
+    console.log('currentList', currentList);
+    let sum = 0;
+    let text = '';
+    let date = new Date().toLocaleTimeString();
+    currentList.map((i:any) => {
+      return i 
+    })
+    const str = `${'name:' + " value:"}  `
+    setCurrentText(str)
 
-  //   console.log('date',date );
+    console.log('date',date );
 
-  // }
+  }
 
   return (
     <>
-      <div>
-        <div >
-          <ul>
-            <li>111</li>
-            <li>222</li>
-            <li>333</li>
-          </ul>
-        </div>
-
         {/* <Input defaultValue={i.value} suffix="万" /> */}
 
-        {/* <Card >
+        <Card >
           <Row>
             <Col span={12}>
               <Card title={'title'} extra={<Button>secchi</Button>}>
@@ -79,8 +70,7 @@ const Home = memo(() => {
             </Col>
           </Row>
 
-        </Card> */}
-      </div>
+        </Card>
     </>
 
   );

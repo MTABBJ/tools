@@ -10,19 +10,9 @@ import Page1 from './pages/Page1'
 import Loading from './components/Loading'
 
 function App() {
-  const location = useLocation()
+  // const location = useLocation()
   const [flag, setFlag] = useState(false)
 
-  useEffect(() => {
-    console.log(location.pathname);
-    
-    setFlag(true)
-    setTimeout(() => {
-      console.log('app-mount, 5S timeout ')
-      setFlag(false)
-    }, 5000);
-
-  }, [location])
 
   return (
     <>
