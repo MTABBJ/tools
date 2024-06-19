@@ -31,9 +31,9 @@ function App() {
       <Link to="/page2">页面2</Link><br /> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/page1" element={<Page1 />} />
+        <Route path="/myblog/" element={<Home />} />
+        <Route path="/myblog/home" element={<Home />} />
+        <Route path="/myblog/page1" element={<Page1 />} />
       </Routes>
     </>
 
