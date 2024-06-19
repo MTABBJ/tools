@@ -231,7 +231,7 @@ const App: React.FC = () => {
   }
 
   const rowSelection = {
-    onChange: ( selectedRowKeys: DataType[],selectedRows: DataType[]) => {
+    onChange: ( _:any,selectedRows: DataType[]) => {
       setCurSource(selectedRows)
     },
     getCheckboxProps: (record: DataType) => ({
