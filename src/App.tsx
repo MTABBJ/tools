@@ -21,7 +21,7 @@ function App() {
       <Link to="/page2">页面2</Link><br /> */}
 
       <Routes>
-        <Route path={`${localPath}/`} element={<Home />} />
+        <Route path={`${localPath}/smth`} element={<Home />} />
         <Route path={`${localPath}/home`} element={<Home />} />
         <Route path={`${localPath}/page1`} element={<Page1 />} />
       </Routes>

@@ -18,7 +18,6 @@ interface Item {
   key: string;
   name: string;
   number: string;
-  address: string;
 }
 
 interface EditableRowProps {
