@@ -7,7 +7,7 @@ import {
 import {
   PlusOutlined, ExclamationCircleOutlined
 } from '@ant-design/icons';
-import { staticData } from '@/const'
+import { staticData } from './const'
 import './index.less'
 
 const { TextArea } = Input;
