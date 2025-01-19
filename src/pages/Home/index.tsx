@@ -40,9 +40,12 @@ const App: React.FC = () => {
                   {item.description}
                 </Paragraph>
               </Typography>
-              <Link to={`${localPath + item.path}`}>
+              {/* <Link to={`${item.path}`}>
                 <Button type="primary"> 点击前往 </Button>
-              </Link>
+              </Link> */}
+              <Button type="primary" onClick={() => {
+                window.open(`${item.path}`)
+              }}> 点击前往 </Button>
             </Card.Grid>
           ))}
         </Card>
