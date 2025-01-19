@@ -47,9 +47,11 @@ const App: React.FC = () => {
                   {item.description}
                 </Paragraph>
               </Typography>
-              {/* <Link to={`${item.path}`}> */}
-              <Button type="primary" onClick={() => handleClick(item.path)}> 点击前往 </Button>
-              {/* </Link> */}
+              <Link to={`${item.path}`}>
+                <Button type="primary"
+                  // onClick={() => handleClick(item.path)}
+                > 点击前往 </Button>
+              </Link>
             </Card.Grid>
           ))}
         </Card>
