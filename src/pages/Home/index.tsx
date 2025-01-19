@@ -47,11 +47,17 @@ const App: React.FC = () => {
                   {item.description}
                 </Paragraph>
               </Typography>
+              {item.type == 'local'?
               <Link to={`${item.path}`}>
                 <Button type="primary"
                   // onClick={() => handleClick(item.path)}
                 > 点击前往 </Button>
               </Link>
+              :
+              <Button type="primary"
+                  onClick={() => handleClick(item.path)}
+                > 点击前往 </Button>
+              }
             </Card.Grid>
           ))}
         </Card>
