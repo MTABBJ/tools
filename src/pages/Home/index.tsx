@@ -25,8 +25,15 @@ const imgStyle: React.CSSProperties = {
 };
 
 const App: React.FC = () => {
-  const [count, setCount] = useState(2);
-  const [currentText, setCurrentText] = useState<string>();
+  const handleClick = (path: string) => {
+    if (path.startsWith('/')) {
+      // 对于本地路由，使用 window.open 打开新窗口
+      window.open(window.location.origin + path, '_blank');
+    } else {
+      // 对于外部链接，直接使用 a 标签的默认行为
+      window.open(path, '_blank');
+    }
+  };
 
   return (
     <div className='home-page'>
@@ -40,12 +47,9 @@ const App: React.FC = () => {
                   {item.description}
                 </Paragraph>
               </Typography>
-              {/* <Link to={`${item.path}`}>
-                <Button type="primary"> 点击前往 </Button>
-              </Link> */}
-              <Button type="primary" onClick={() => {
-                window.open(`${item.path}`)
-              }}> 点击前往 </Button>
+              {/* <Link to={`${item.path}`}> */}
+              <Button type="primary" onClick={() => handleClick(item.path)}> 点击前往 </Button>
+              {/* </Link> */}
             </Card.Grid>
           ))}
         </Card>
