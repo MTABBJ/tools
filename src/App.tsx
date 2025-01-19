@@ -8,7 +8,6 @@ import './App.css'
 import Home from '@/pages/Home'
 import Smth from '@/pages/Smth'
 import Metronome from '@/pages/Metronome'
-import Drawarea from '@/pages/Drawarea'
 import Error from '@/pages/Error'
 import Loading from '@/components/Loading'
 
@@ -33,7 +32,6 @@ function App() {
           <Route path={`${localPath}/`} element={<Home />} />
           <Route path={`${localPath}/smth`} element={<Smth />} />
           <Route path={`${localPath}/metronome`} element={<Metronome />} />
-          {/* <Route path={`${localPath}/drawarea`} element={<Drawarea />} /> */}
           <Route path={`*`} element={<Error />} />
         </Routes>
 
